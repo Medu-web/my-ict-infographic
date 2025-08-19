@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>教育ICT環境改革 SPAインフォグラフィック (A4向け)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #F0F4F8;
+            color: #333333; /* Darker text for print clarity */
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 350px; /* Adjusted for A4 portrait width */
+            margin-left: auto;
+            margin-right: auto;
+            height: 280px; /* Slightly reduced height for A4 */
+            max-height: 350px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 350px;
+            }
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #00A1E4, #005A9E);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        /* Print-specific styles to improve page breaks - conceptual */
+        @media print {
+            .section-break-after {
+                page-break-after: always;
+            }
+            body {
+                background-color: white !important;
+                color: black !important;
+            }
+            .bg-white {
+                box-shadow: none !important;
+                border: 1px solid #eee;
+            }
+            /* Ensure colors are print-friendly */
+            h1, h2, h3, h4 {
+                color: #005A9E !important; /* Force darker blue for print */
+            }
+            .gradient-text {
+                -webkit-text-fill-color: #005A9E !important;
+            }
+            .text-blue-200 { color: #005A9E !important; }
+            .text-gray-600 { color: #555 !important; }
+            .text-gray-700 { color: #444 !important; }
+            .text-gray-800 { color: #333 !important; }
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <div class="container mx-auto p-4 md:p-8 max-w-3xl">
+
+        <header class="text-center mb-10 md:mb-12">
+            <h1 class="text-3xl md:text-4xl font-black gradient-text">教育ICT環境改革</h1>
+            <p class="text-lg md:text-xl text-gray-600 mt-1">既存の資産を最大限に活用する、予算ゼロからの挑戦</p>
+        </header>
+
+        <section class="mb-12 section-break-after">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6">1. なぜ今、改革が必要なのか？</h2>
+            <div class="grid md:grid-cols-3 gap-5 text-center">
+                <div class="bg-white p-5 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-2">⏱️</div>
+                    <h3 class="text-lg font-bold mb-1">運用負荷の増大</h3>
+                    <p class="text-gray-600 text-sm">アプリ毎のID/PW管理に、教員の貴重な時間が奪われています。</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-2">🔒</div>
+                    <h3 class="text-lg font-bold mb-1">セキュリティリスク</h3>
+                    <p class="text-gray-600 text-sm">ブラウザパスワード保存は情報漏洩の危険と隣り合わせです。</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-lg">
+                    <div class="text-4xl mb-2">📈</div>
+                    <h3 class="text-lg font-bold mb-1">スケールしない運用</h3>
+                    <p class="text-gray-600 text-sm">児童生徒やアプリ増加で、管理業務が破綻に近づきます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center bg-white rounded-xl shadow-2xl p-8 md:p-10 mb-12 section-break-after" style="background: linear-gradient(45deg, #0077C0, #005A9E);">
+            <h2 class="text-2xl md:text-3xl font-bold text-white mb-4">2. 解決の鍵は、追加予算ではなく「活用」</h2>
+            <p class="text-lg text-blue-200 mb-5">必要なものは、既に学校にあります。</p>
+            <div class="bg-white rounded-lg inline-block p-4">
+                <p class="text-gray-700 text-base">必要な追加予算</p>
+                <p class="font-black text-7xl md:text-8xl" style="color: #F39200;">0<span class="text-4xl md:text-5xl text-gray-800 ml-1">円</span></p>
+                <p class="text-gray-600 mt-1 text-sm">Microsoft 365 A1ライセンス（無償）を最大限に活用</p>
+            </div>
+        </section>
+
+        <section class="mb-12 section-break-after">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6">3. 3つの柱で実現する理想の学習環境</h2>
+            <div class="bg-white p-6 md:p-7 rounded-xl shadow-lg">
+                <div class="grid md:grid-cols-3 gap-3 items-center text-center relative">
+                    <div class="p-3">
+                        <div class="text-4xl">🔑</div>
+                        <h3 class="text-base font-bold mt-1 text-blue-700">統合認証 (SSO)</h3>
+                        <p class="text-xs text-gray-600">Microsoft Entra ID</p>
+                    </div>
+                    <div class="hidden md:block text-4xl text-gray-300 font-light">→</div>
+                    <div class="p-3">
+                        <div class="text-4xl">🖥️</div>
+                        <h3 class="text-base font-bold mt-1 text-blue-700">統合ポータル</h3>
+                        <p class="text-xs text-gray-600">SharePoint & Teams</p>
+                    </div>
+                     <div class="hidden md:block text-4xl text-gray-300 font-light">→</div>
+                    <div class="p-3">
+                        <div class="text-4xl">⚙️</div>
+                        <h3 class="text-base font-bold mt-1 text-blue-700">統合端末管理</h3>
+                        <p class="text-xs text-gray-600">Intune for Education</p>
+                    </div>
+                </div>
+                <hr class="my-5 border-gray-200">
+                <p class="text-center text-gray-700 text-sm md:text-base">この3つの連携により、**「1つのIDで」「1つの入口から」「どの端末でも同じように」**学習アプリへアクセスできる環境が自動的に構築されます。</p>
+            </div>
+        </section>
+
+        <section class="mb-12 section-break-after">
+             <h2 class="text-center text-2xl md:text-3xl font-bold mb-6">4. データで見る解決策の優位性</h2>
+            <div class="bg-white p-6 md:p-7 rounded-xl shadow-lg">
+                <h3 class="text-lg font-bold text-center mb-2">ログイン方法 総合評価比較</h3>
+                <p class="text-center text-gray-600 text-sm mb-5">レポートの分析に基づき、利便性・セキュリティ・運用効率を総合的に評価すると、シングルサインオン（SSO）の優位性は明らかです。</p>
+                <div class="chart-container">
+                    <canvas id="loginApproachChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-center text-2xl md:text-3xl font-bold mb-6">5. 改革へのロードマップ</h2>
+            <div class="space-y-6">
+                <div class="md:flex items-center bg-white p-5 rounded-xl shadow-lg">
+                    <div class="text-4xl font-black mr-5 mb-3 md:mb-0" style="color: #00A1E4;">Phase 1</div>
+                    <div>
+                        <h3 class="text-lg font-bold">準備とパイロット導入 <span class="text-base font-normal text-gray-500">(1-2ヶ月)</span></h3>
+                        <p class="text-gray-700 mt-1 text-sm">主要な学習アプリでSSOを検証し、特定クラスでポータルを試験導入。リスクを抑え、成功体験を積みます。</p>
+                    </div>
+                </div>
+                <div class="md:flex items-center bg-white p-5 rounded-xl shadow-lg">
+                    <div class="text-4xl font-black mr-5 mb-3 md:mb-0" style="color: #0077C0;">Phase 2</div>
+                    <div>
+                        <h3 class="text-lg font-bold">全校展開と運用改善 <span class="text-base font-normal text-gray-500">(3-6ヶ月)</span></h3>
+                        <p class="text-gray-700 mt-1 text-sm">成功モデルを全校に展開。Intuneで端末設定を自動化し、教員研修を実施して新しい運用を定着させます。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="text-center mt-12">
+            <h3 class="text-xl font-bold mb-5">改革がもたらす未来</h3>
+            <div class="grid md:grid-cols-3 gap-5">
+                <div class="bg-white p-5 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-base text-green-600">✅ 効率向上</h4>
+                    <p class="text-sm">ID管理業務を90%以上削減</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-base text-blue-600">🛡️ セキュリティ強化</h4>
+                    <p class="text-sm">パスワード漏洩リスクを最小化</p>
+                </div>
+                <div class="bg-white p-5 rounded-xl shadow-lg">
+                    <h4 class="font-bold text-base text-orange-500">😊 利便性向上</h4>
+                    <p class="text-sm">児童生徒は1クリックで学習開始</p>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctx = document.getElementById('loginApproachChart').getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['シングルサインオン (SSO)', 'パスワードマネージャー', 'ブラウザパスワード保存'],
+                    datasets: [{
+                        label: '総合評価',
+                        data: [90, 60, 25],
+                        backgroundColor: [
+                            '#0077C0',
+                            '#00A1E4',
+                            '#F39200'
+                        ],
+                        borderColor: '#FFFFFF',
+                        borderWidth: 4,
+                        hoverOffset: 10
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'bottom',
+                            labels: {
+                                padding: 15,
+                                font: {
+                                    size: 12,
+                                    family: "'Noto Sans JP', sans-serif"
+                                }
+                            }
+                        },
+                        tooltip: {
+                            callbacks: {
+                                title: function(tooltipItems) {
+                                    const item = tooltipItems[0];
+                                    let label = item.chart.data.labels[item.dataIndex];
+                                    if (Array.isArray(label)) {
+                                      return label.join(' ');
+                                    } else {
+                                      return label;
+                                    }
+                                },
+                                label: function(context) {
+                                    let label = '総合評価: ';
+                                    if (context.parsed !== null) {
+                                        let score = context.parsed;
+                                        let summary = '';
+                                        if (score > 80) summary = '最も推奨される解決策';
+                                        else if (score > 50) summary = '補助的な解決策';
+                                        else summary = 'リスクが高く非推奨';
+                                        label += summary + ` (${score}点)`;
+                                    }
+                                    return label;
+                                }
+                            },
+                            bodyFont: {
+                                size: 12,
+                                family: "'Noto Sans JP', sans-serif"
+                            },
+                            titleFont: {
+                                size: 14,
+                                family: "'Noto Sans JP', sans-serif"
+                            },
+                            padding: 10,
+                            boxPadding: 3
+                        }
+                    },
+                    cutout: '60%'
+                }
+            });
+        });
+    </script>
+</body>
+</html>
